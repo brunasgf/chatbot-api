@@ -43,49 +43,54 @@ class GitHubCtrl {
     }
 
     getInRepos(query) {
-        const repos = []
+        let repos = []
         const defaultRepo = {
-            /*
-            "id": 0,
-            "to": "1042221589186385@messenger.gw.msging.net",
-            "type": "application/vnd.lime.collection+json",
-            "content": [
-                    itemType: "application/vnd.lime.document-select+json", 
-                    items: [
-                        header: [
-                            type: "application/vnd.lime.media-link+json", 
-                            value [
-                                title: name, 
-                                text: description,
-                                type: "image/jpeg", 
-                                uri: "https://avatars1.githubusercontent.com/u/4369522?s=200&v=4"
-                            ]  
-                        ]
-                    ]
-                ]
-            }
-            */
+            id: 0,
             name: null,
             description: null
         }
 
-        console.log(this.repos)
-        console.log("\n\n\n\n\n\n\n")
+        //console.log(this.repos)
+        //console.log("\n\n\n\n\n\n\n")
 
         for (let i = 0; i < this.repos.length; i++) {
             const repo = _.clone(defaultRepo)
+            //console.log(this.repos)
             if (
                 (this.repos[i].name !== null && this.repos[i].name.indexOf(query) !== -1) ||
                 (this.repos[i].description !== null && this.repos[i].description.indexOf(query) !== -1)
             ) {
                 repo.name = this.repos[i].name
                 repo.description = this.repos[i].description
-                //repo.id = id++
+                repo.id = this.id + 1
+                //console.log(this.repos)
+                repos = [{           
+                    id:repo.id,
+                    to: "1042221589186385@messenger.gw.msging.net",
+                    type: "application/vnd.lime.collection+json",
+                    content: [{
+                            itemType: "application/vnd.lime.document-select+json", 
+                            items: [{
+                                header: [{
+                                    type: "application/vnd.lime.media-link+json", 
+                                    value: [{
+                                        title: repo.name, 
+                                        text: repo.description,
+                                        type: "image/jpeg", 
+                                        uri: "https://avatars1.githubusercontent.com/u/4369522?s=200&v=4"
+                                    }]  
+                                }]
+                            }]
+                        }]
+                    }]
+                //console.log(this.repos)
 
                 repos.push(repo)
+                //console.log(this.repos)
             }
         }
-        //repos.JSON.stringify(defaultRepo)
+        JSON.stringify(repos)
+        //console.log(this.repos)
         return repos
     }
 }
