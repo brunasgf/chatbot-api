@@ -5,7 +5,7 @@ class Request {
         this.RPAP = rp.defaults({
             resolveWithFullResponse: true,
             headers: {
-                'Authorization': `Bearer 71edb2cfbb05f9d6695e9eaa740999f8636c332b`,
+                'Authorization': `Bearer 306d7ff3e4010ba7bf1d3d6d9d7735fe52395a64`,
                 'User-Agent': 'Awesome-Octocat-App'
             }
         })

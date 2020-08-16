@@ -45,6 +45,26 @@ class GitHubCtrl {
     getInRepos(query) {
         const repos = []
         const defaultRepo = {
+            /*
+            "id": 0,
+            "to": "1042221589186385@messenger.gw.msging.net",
+            "type": "application/vnd.lime.collection+json",
+            "content": [
+                    itemType: "application/vnd.lime.document-select+json", 
+                    items: [
+                        header: [
+                            type: "application/vnd.lime.media-link+json", 
+                            value [
+                                title: name, 
+                                text: description,
+                                type: "image/jpeg", 
+                                uri: "https://avatars1.githubusercontent.com/u/4369522?s=200&v=4"
+                            ]  
+                        ]
+                    ]
+                ]
+            }
+            */
             name: null,
             description: null
         }
@@ -60,11 +80,12 @@ class GitHubCtrl {
             ) {
                 repo.name = this.repos[i].name
                 repo.description = this.repos[i].description
+                //repo.id = id++
 
                 repos.push(repo)
             }
         }
-
+        //repos.JSON.stringify(defaultRepo)
         return repos
     }
 }
