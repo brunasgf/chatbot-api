@@ -13,6 +13,6 @@ Para testar a api no https://blip.ai, faça o download do ngrok e suba ela no ng
 
 Se atente em verificar se já não está usando a porta 8000, se estiver, troque.
 
-É provável que você também precise trocar o token do github, ele expira em algumas horas. Vá no arquivo request.js:8.
+Você também precisa trocar o token do github. Vá no arquivo request.js:8.
 
 Para gerar um novo token no github: Profile > Settings > Developer settings > Personal access tokens > Generate new token.
