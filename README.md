@@ -6,12 +6,12 @@ Api feita com node.js para se conectar a api do github, para mostrar repositóri
 
 Para testar a api no https://blip.ai, faça o download do ngrok e suba ela no ngrok com o comando:
 `
-"./ngrok http 8001"
+"./ngrok http 8000"
 `
 
- e troque o link do conteúdo dinâmico/carrossel. 
+ e troque o link do conteúdo http/carrossel. 
 
-Se atente em verificar se já não está usando a porta 8001, se estiver, troque no arquivo "default.json".
+Se atente em verificar se já não está usando a porta 8000, se estiver, troque no arquivo "default.json".
 
 Você também precisa trocar o token do github. Vá no arquivo "request.js:8".
 
