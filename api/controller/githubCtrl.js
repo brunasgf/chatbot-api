@@ -80,8 +80,6 @@ class GitHubCtrl {
                 repo.content.items.push(item)
             }
         }
-
-        JSON.stringify(repo)
         return repo
     }
 }
