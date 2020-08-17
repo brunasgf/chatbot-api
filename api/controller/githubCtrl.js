@@ -55,7 +55,6 @@ class GitHubCtrl {
 
         for (let i = 0; i < this.repos.length; i++) {
             const repo = _.clone(defaultRepo)
-            //console.log(this.repos)
             if (
                 (this.repos[i].name !== null && this.repos[i].name.indexOf(query) !== -1) ||
                 (this.repos[i].description !== null && this.repos[i].description.indexOf(query) !== -1)
@@ -63,7 +62,6 @@ class GitHubCtrl {
                 repo.name = this.repos[i].name
                 repo.description = this.repos[i].description
                 repo.id = this.id + 1
-                //console.log(this.repos)
                 repos = [{           
                     id:repo.id,
                     to: "1042221589186385@messenger.gw.msging.net",
@@ -83,14 +81,10 @@ class GitHubCtrl {
                             }]
                         }]
                     }]
-                //console.log(this.repos)
-
                 repos.push(repo)
-                //console.log(this.repos)
             }
         }
         JSON.stringify(repos)
-        //console.log(this.repos)
         return repos
     }
 }
