@@ -13,9 +13,6 @@ class GitHubRoutes {
         const response = this.gitHubCtrl.getInRepos(req.params.query)
         res.status(200)
         res.send(response)
-        /* 
-        response.JSON.stringify(defaultRepo);
-        */
     }
 }
 
