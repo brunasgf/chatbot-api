@@ -4,7 +4,7 @@ Api feita com node.js para se conectar a api do github, para mostrar repositóri
 
 ### Orientações de uso
 
-Para testar a api no https://blip.ai, faça o download do ngrok e suba ela no ngrok com o comando:
+Para testar a api no https://blip.ai, faça o download do ngrok (https://ngrok.com/) e suba ela no ngrok com o comando:
 `
 "./ngrok http 8000"
 `
